@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Luckiest+Guy&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Luckiest Guy", cursive;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+}
+
+header nav {
+    display: flex;
+    gap: 16px;
+}
+
+header nav a {
+    padding: 10px 14px;
+    border-radius: 100px;
+}
+
+header nav a.active {
+    background: black;
+    color: white;
+}
+
+header nav a:hover {
+    background: rgb(232, 125, 143);
+}
+
+.hero {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTklPNO5WwKSZN9_Pc1_zkgTIGu9ZUC8QB_CU39Jsvs2BV-ORH1nFMWaQI&s=10");
+    height: 300px;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+.menu-title {
+    max-width: 1000px;
+    margin: 24px auto 0;
+    padding: 24px;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(232, 125, 143);
+}
+
+.gallery {
+    display: grid; 
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 24px;
+}
+
+.image {
+    min-width: 0;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.about-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding: 0 12px 10px;
+}
+
+.about-image p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.heart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.heart-icon:hover {
+    transform: scale(1.2)
+}
+
+.heart-icon svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.heart-icon svg:hover {
+    fill: rgb(232, 125, 143);
+    stroke: rgb(232, 125, 143);
+}
+
+.view-all {
+    display: block;
+    width: 280px;
+    margin: 24px auto 40px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.view-all:hover {
+    background: rgb(232, 125, 143);
+}
+
+footer {
+    background: rgb(232, 125, 143);
+    padding: 30px;
+}
+.footer-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left img {
+    height: 100px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right h3 {
+    margin-bottom: 15px;
+}
+
+.footer-right p {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .image img {
+        height: 120px;
+    }
+
+    .about-image {
+        gap: 4px;
+        padding: 0 6px 8px;
+    }
+
+    .about-image p {
+        font-size: 14px;
+    }
+
+    .heart-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
